@@ -109,9 +109,9 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.ViewHo
             if(freeCoupansNo!=0 && inStock){
                 coupanIcon.setVisibility(View.VISIBLE);
                 if(freeCoupansNo==1){
-                    freeCoupans.setText("free "+freeCoupansNo+" coupan");
+                    freeCoupans.setText("free "+freeCoupansNo+" coupen");
                 }else {
-                    freeCoupans.setText("free "+freeCoupansNo+" coupans");
+                    freeCoupans.setText("free "+freeCoupansNo+" coupens");
                 }
             }else {
                 coupanIcon.setVisibility(View.INVISIBLE);

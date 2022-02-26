@@ -220,8 +220,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                                     codIndicator.setVisibility(View.INVISIBLE);
                                                     tvcodIndicator.setVisibility(View.INVISIBLE);
                                                 }
-                                                rewardTitle.setText((long) documentSnapshot.get("free_coupans") + documentSnapshot.get("free_coupan_title").toString());
-                                                rewardBody.setText(documentSnapshot.get("free_coupan_body").toString());
+                                                rewardTitle.setText((long) documentSnapshot.get("free_coupens") + documentSnapshot.get("free_coupen_title").toString());
+                                                rewardBody.setText(documentSnapshot.get("free_coupen_body").toString());
 
                                                 if ((boolean) documentSnapshot.get("use_tab_layout")) {
                                                     productDetailsTabsContainer.setVisibility(View.VISIBLE);
@@ -332,7 +332,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                                                                                 DBquerries.cartItemModelList.add(0,new CartItemModel(CartItemModel.CART_ITEM
                                                                                                         , productID
                                                                                                         , documentSnapshot.get("product_image_1").toString()
-                                                                                                        , (long) documentSnapshot.get("free_coupans")
+                                                                                                        , (long) documentSnapshot.get("free_coupens")
                                                                                                         , (long) 1
                                                                                                         ,(long)documentSnapshot.get("offers_applied")
                                                                                                         , (long) 0
@@ -424,7 +424,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                                             productID
                                                             , documentSnapshot.get("product_image_1").toString()
                                                             , documentSnapshot.get("product_title").toString()
-                                                            , (long) documentSnapshot.get("free_coupans")
+                                                            , (long) documentSnapshot.get("free_coupens")
                                                             , documentSnapshot.get("average_rating").toString()
                                                             , (long) documentSnapshot.get("total_ratings")
                                                             , documentSnapshot.get("product_price").toString()
@@ -609,7 +609,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     DeliveryActivity.cartItemModelList.add(new CartItemModel(CartItemModel.CART_ITEM
                             , productID
                             , documentSnapshot.get("product_image_1").toString()
-                            , (long) documentSnapshot.get("free_coupans")
+                            , (long) documentSnapshot.get("free_coupens")
                             , (long) 1
                             ,(long)documentSnapshot.get("offers_applied")
                             , (long) 0
