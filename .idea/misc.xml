@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/My-Mall/app/src/main/res/layout/activity_delivery.xml" value="0.10989583333333333" />
+        <entry key="..\:/AndroidStudioProjects/My-Mall/app/src/main/res/layout/activity_otpverification.xml" value="0.10989583333333333" />
         <entry key="..\:/AndroidStudioProjects/My-Mall/app/src/main/res/layout/payment_method.xml" value="0.10989583333333333" />
         <entry key="..\:/AndroidStudioProjects/My-Mall/app/src/main/res/layout/product_description_layout.xml" value="0.10989583333333333" />
+        <entry key="..\:/AndroidStudioProjects/My-Mall/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

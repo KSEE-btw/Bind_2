@@ -53,7 +53,8 @@ public class OTPverificationActivity extends AppCompatActivity {
 
         Random random = new Random();
         final int OTP_no=random.nextInt(999999-111111)+111111;
-        String SMS_API="https://www.fast2sms.com/dev/bulk";
+       // String SMS_API="https://www.fast2sms.com/dev/bulk";
+        String SMS_API="https://www.fast2sms.com/dev/bulkV2";
 
         StringRequest stringRequest=new StringRequest(Request.Method.POST, SMS_API, new Response.Listener<String>() {
             @Override
@@ -114,6 +115,7 @@ public class OTPverificationActivity extends AppCompatActivity {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<String, String>();
                 headers.put("authorization","B5WzCKYbZuvV7tdGwga2MDs431Oj8xIlciqA9USFQeonfkh6mROPywVDBz6qv2muHjaT1Afibx9QIsRX");
+                //headers.put("authorization","AqY9RofbMUjDXs8IwEk2VaulNKc53rp7ZvCBWdHnzOLx6ymF4i48yC7VuAGlwLFgDidEobh1aJScI6nH");
 
                 return headers;
 
