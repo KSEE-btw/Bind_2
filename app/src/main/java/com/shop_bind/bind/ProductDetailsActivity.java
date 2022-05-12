@@ -177,7 +177,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         final List<String> productImages = new ArrayList<>();
 
-        productID = getIntent().getStringExtra("PRODUCT_ID");
+        productID = "FUjBkVft7KoI9YE73nys" /*getIntent().getStringExtra("PRODUCT_ID")*/;
 
         firebaseFirestore.collection("PRODUCTS").document(productID).get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -192,7 +192,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                             if(task.isSuccessful()){
 
-                                                for (int x = 1; x <= (long) documentSnapshot.get("no_of_product_images"); x++) {
+                                                for (long x = 1; x <= (long) documentSnapshot.get("no_of_product_images"); x++) {
                                                     productImages.add(documentSnapshot.get("product_image_" + x).toString());
                                                 }
                                                 ProductImagesAdapter productImagesAdapter = new ProductImagesAdapter(productImages);

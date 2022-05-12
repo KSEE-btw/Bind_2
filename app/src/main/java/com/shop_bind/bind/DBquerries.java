@@ -133,7 +133,7 @@ public class DBquerries {
                                         horizontalProductScrollModelList.add(new HorizontalProductScrollModel(
                                                 queryDocumentSnapshot.get("product_ID_"+x).toString()
                                                 ,queryDocumentSnapshot.get("product_image_"+x).toString()
-                                                ,queryDocumentSnapshot.get("product_title_"+x).toString()
+                                                ,"Google Pixel XL 128GB"/*queryDocumentSnapshot.get("product_title_"+x).toString()*/
                                                 ,queryDocumentSnapshot.get("product_subtitle_"+x).toString()
                                                 ,queryDocumentSnapshot.get("product_price_"+x).toString()
                                         ));
@@ -144,11 +144,11 @@ public class DBquerries {
                                                 ,queryDocumentSnapshot.get("product_full_title_"+x).toString()
                                                 ,(long)queryDocumentSnapshot.get("free_coupens_"+x)
                                                 ,queryDocumentSnapshot.get("average_rating_"+x).toString()
-                                                ,(long)queryDocumentSnapshot.get("total_ratings_"+x)
+                                                ,Long.parseLong(queryDocumentSnapshot.get("total_ratings_"+x).toString())
                                                 ,queryDocumentSnapshot.get("product_price_"+x).toString()
                                                 ,queryDocumentSnapshot.get("cutted_price_"+x).toString()
                                                 ,(boolean)queryDocumentSnapshot.get("COD_"+x)
-                                                ,(boolean)queryDocumentSnapshot.get("in_stock_"+x)
+                                                ,/*(boolean)queryDocumentSnapshot.get("in_stock_"+x)*/true
                                         ));
                                     }
                                     lists.get(index).add(new MyMallModel(2,queryDocumentSnapshot.get("layout_title").toString(),queryDocumentSnapshot.get("layout_background").toString(),horizontalProductScrollModelList,viewAllProductList));
@@ -228,7 +228,7 @@ public class DBquerries {
                                                                                         productId
                                                                                         ,documentSnapshot.get("product_image_1").toString()
                                                                                         , documentSnapshot.get("product_title").toString()
-                                                                                        , (long) documentSnapshot.get("free_coupans")
+                                                                                        , (long) documentSnapshot.get("free_coupens")
                                                                                         , documentSnapshot.get("average_rating").toString()
                                                                                         , (long) documentSnapshot.get("total_ratings")
                                                                                         , documentSnapshot.get("product_price").toString()
@@ -398,7 +398,7 @@ public class DBquerries {
                                                                                 cartItemModelList.add(index,new CartItemModel(CartItemModel.CART_ITEM
                                                                                         ,productId
                                                                                         ,documentSnapshot.get("product_image_1").toString()
-                                                                                        , (long) documentSnapshot.get("free_coupans")
+                                                                                        , (long) documentSnapshot.get("free_coupens")
                                                                                         ,(long)1
                                                                                         ,(long)documentSnapshot.get("offers_applied")
                                                                                         ,(long)0
@@ -703,10 +703,10 @@ public class DBquerries {
                                     notificationModelList.add(0,new NotificationModel(
                                             documentSnapshot.getString("image_"+x)
                                             ,documentSnapshot.getString("body_"+x)
-                                            ,documentSnapshot.getBoolean("readed_"+x)
+                                            ,documentSnapshot.getBoolean("Readed_"+x)
 
                                     ));
-                                    if(!documentSnapshot.getBoolean("readed_"+x)){
+                                    if(!documentSnapshot.getBoolean("Readed_"+x)){
                                        unread++;
                                        if(notifycount != null){
                                            if(unread>0) {
